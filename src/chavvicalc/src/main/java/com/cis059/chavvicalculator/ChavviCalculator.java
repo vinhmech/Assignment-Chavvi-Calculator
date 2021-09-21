@@ -66,12 +66,12 @@ public class ChavviCalculator
 
             // + option
             else if (choice.charAt(0) == '+'){
-                a = a + b;
+                a=a+b;
             }
 
             // - option 
             else if (choice.charAt(0) == '-') {
-                a = a - b;
+                a=a-b;
             }
 
             // * option
