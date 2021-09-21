@@ -66,18 +66,29 @@ public class ChavviCalculator
 
             // + option
             else if (choice.charAt(0) == '+'){
-                a=a+b;
+                a = a + b;
             }
 
             // - option 
             else if (choice.charAt(0) == '-') {
-                a=a-b;
+                a = a - b;
             }
 
             // * option
             else if (choice.charAt(0) == '*') {
                 a = a * b;
             }
+
+            // / option
+            else if (choice.charAt(0) == '/'){
+                if (b == 0) {
+                    System.out.println("ERROR: Unable to divide by 0");
+                }
+                else {
+                    a = a / b;
+                }
+            }
+
 
             // quit option
             else if (choice.charAt(0) == 'q'){
