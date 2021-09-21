@@ -64,6 +64,21 @@ public class ChavviCalculator
                 }
             }
 
+            // + option
+            else if (choice.charAt(0) == '+'){
+                a = a + b;
+            }
+
+            // - option 
+            else if (choice.charAt(0) == '-') {
+                a = a - b;
+            }
+
+            // * option
+            else if (choice.charAt(0) == '*') {
+                a = a * b;
+            }
+
             // quit option
             else if (choice.charAt(0) == 'q'){
                 sc.close();
