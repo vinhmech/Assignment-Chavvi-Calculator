@@ -20,7 +20,7 @@ public class ChavviCalculator
         String choice = "";
         float a = 0;
         float b = 0;
-        //do{
+        do{
             System.out.print("--------------------------------------------");
             System.out.print("\nChavvi Calc");
             System.out.print("\n--------------------------------------------");
@@ -36,8 +36,14 @@ public class ChavviCalculator
             System.out.print("\nq       Quit");
             System.out.print("\n--------------------------------------------");
             System.out.print("\nEnter a command: ");
-            //choice = sc.nextLine();
-        //} while (choice.equals("") || choice.charAt(0) != 'q');
+            choice = sc.nextLine();
+
+            // quit option
+            if (choice.charAt(0) == 'q'){
+                sc.close();
+                System.out.println("Thank you for using Chavvi Calculator");
+            }
+        } while (choice.equals("") || choice.charAt(0) != 'q');
     }
 
     public static void main( String[] args )
