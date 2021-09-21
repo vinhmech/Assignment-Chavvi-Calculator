@@ -89,6 +89,12 @@ public class ChavviCalculator
                 }
             }
 
+            // clear option
+            else if (choice.charAt(0) == 'c'){
+                a = 0;
+                b = 0;
+            }
+
 
             // quit option
             else if (choice.charAt(0) == 'q'){
