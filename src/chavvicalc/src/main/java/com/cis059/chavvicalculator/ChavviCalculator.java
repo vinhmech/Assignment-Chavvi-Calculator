@@ -24,7 +24,7 @@ public class ChavviCalculator
             System.out.print("--------------------------------------------");
             System.out.print("\nChavvi Calc");
             System.out.print("\n--------------------------------------------");
-            System.out.print(String.format("\nA = %.3f        B = %.3f ", a , b));
+            System.out.print(String.format("\nA = %.3f        B = %.3f", a , b));
             System.out.print("\n--------------------------------------------");
             System.out.print("\na       Enter a value for A");
             System.out.print("\nb       Enter a value for B");
@@ -38,8 +38,34 @@ public class ChavviCalculator
             System.out.print("\nEnter a command: ");
             choice = sc.nextLine();
 
+            // input A 
+            if (choice.charAt(0) == 'a'){
+                System.out.print("Enter a number: ");
+                String a_string;
+                try {
+                    a_string = sc.nextLine();
+                    a = Float.parseFloat(a_string);
+                }
+                catch (NumberFormatException e){
+                    System.out.println("ERROR: The value entered is not a floating point number");
+                }
+            }
+
+            // input B
+            else if (choice.charAt(0) == 'b') {
+                System.out.print("Enter a number: ");
+                      String b_string;
+                try{
+                  b_string = sc.nextLine();
+                  b = Float.parseFloat(b_string);
+                }
+                catch (NumberFormatException e){
+                  System.out.println("ERROR: The value entered is not a floating point number");
+                }
+            }
+
             // quit option
-            if (choice.charAt(0) == 'q'){
+            else if (choice.charAt(0) == 'q'){
                 sc.close();
                 System.out.println("Thank you for using Chavvi Calculator");
             }
