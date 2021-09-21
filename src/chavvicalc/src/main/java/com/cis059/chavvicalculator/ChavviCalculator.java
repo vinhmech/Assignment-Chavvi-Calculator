@@ -24,7 +24,7 @@ public class ChavviCalculator
             System.out.print("--------------------------------------------");
             System.out.print("\nChavvi Calc");
             System.out.print("\n--------------------------------------------");
-            System.out.print(String.format("\nA = %.3f        B = %.3f", a , b));
+            System.out.print(String.format("\nA = %.3f        B = %.3f ", a , b));
             System.out.print("\n--------------------------------------------");
             System.out.print("\na       Enter a value for A");
             System.out.print("\nb       Enter a value for B");
