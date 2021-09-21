@@ -38,8 +38,18 @@ public class ChavviCalculator
             System.out.print("\nEnter a command: ");
             choice = sc.nextLine();
 
+            // user input error handling 
+            // check if user input is a valid char type
+            if (choice.length() != 1){
+                System.out.println("ERROR: Unknown command");
+            }
+            // check if user input is a valid menu character
+            else if (choice.charAt(0) != 'a' && choice.charAt(0) != 'b' && choice.charAt(0) != '+' && choice.charAt(0) != '-' && choice.charAt(0) != '*' && choice.charAt(0) != '/' && choice.charAt(0) != 'c' && choice.charAt(0) != 'q'){
+                System.out.println("ERROR: Unknown command");
+            }
+            
             // input A 
-            if (choice.charAt(0) == 'a'){
+            else if (choice.charAt(0) == 'a'){
                 System.out.print("Enter a number: ");
                 String a_string;
                 try {
