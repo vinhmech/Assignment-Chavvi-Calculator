@@ -14,6 +14,11 @@ import java.util.Scanner;  // Import the Scanner class
 
 public class ChavviCalculator 
 {
+    // function to print line
+    public static void printLine(){
+        System.out.print("\n--------------------------------------------");
+    }
+
     // print the menu
     public static void menu(){
         Scanner sc = new Scanner(System.in); // create scanner object to take input
@@ -21,11 +26,11 @@ public class ChavviCalculator
         float a = 0;
         float b = 0;
         do{
-            System.out.print("--------------------------------------------");
+            printLine();
             System.out.print("\nChavvi Calc");
-            System.out.print("\n--------------------------------------------");
+            printLine();
             System.out.print(String.format("\nA = %.3f        B = %.3f", a , b));
-            System.out.print("\n--------------------------------------------");
+            printLine();
             System.out.print("\na       Enter a value for A");
             System.out.print("\nb       Enter a value for B");
             System.out.print("\n+       Add");
@@ -34,7 +39,7 @@ public class ChavviCalculator
             System.out.print("\n/       Divide");
             System.out.print("\nc       Clear");
             System.out.print("\nq       Quit");
-            System.out.print("\n--------------------------------------------");
+            printLine();
             System.out.print("\nEnter a command: ");
             choice = sc.nextLine();
 
@@ -47,7 +52,7 @@ public class ChavviCalculator
             else if (choice.charAt(0) != 'a' && choice.charAt(0) != 'b' && choice.charAt(0) != '+' && choice.charAt(0) != '-' && choice.charAt(0) != '*' && choice.charAt(0) != '/' && choice.charAt(0) != 'c' && choice.charAt(0) != 'q'){
                 System.out.println("ERROR: Unknown command");
             }
-            
+
             // input A 
             else if (choice.charAt(0) == 'a'){
                 System.out.print("Enter a number: ");
