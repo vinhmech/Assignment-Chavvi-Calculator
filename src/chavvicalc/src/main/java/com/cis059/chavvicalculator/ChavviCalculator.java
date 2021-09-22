@@ -46,13 +46,10 @@ public class ChavviCalculator
             // user input error handling 
             // check if user input is a valid char type
             if (choice.length() != 1){
-                System.out.println("ERROR: Unknown command");
-            }
-            // check if user input is a valid menu character
-            else if (choice.charAt(0) != 'a' && choice.charAt(0) != 'b' && choice.charAt(0) != '+' && choice.charAt(0) != '-' && choice.charAt(0) != '*' && choice.charAt(0) != '/' && choice.charAt(0) != 'c' && choice.charAt(0) != 'q'){
-                System.out.println("ERROR: Unknown command");
+                System.out.println("ERROR: Unknown command 1");
             }
 
+            
             // input A 
             else if (choice.charAt(0) == 'a'){
                 System.out.print("Enter a number: ");
@@ -110,11 +107,15 @@ public class ChavviCalculator
                 b = 0;
             }
 
-
             // quit option
             else if (choice.charAt(0) == 'q'){
                 sc.close();
                 System.out.println("Thank you for using Chavvi Calculator");
+            }
+
+            // display error when user input is not a valid menu character
+            else{
+                System.out.println("ERROR: Unknown command 2");
             }
         } while (choice.equals("") || choice.charAt(0) != 'q');
     }
