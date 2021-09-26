@@ -23,13 +23,13 @@ public class ChavviCalculator
     public static void menu(){
         Scanner sc = new Scanner(System.in); // create scanner object to take input
         String choice = "";
-        float a = 0;
-        float b = 0;
+        float A = 0;                         // initialize value of A 
+        float B = 0;                         // initialize value of B
         do{
             printLine();
             System.out.print("\nChavvi Calc");
             printLine();
-            System.out.print(String.format("\nA = %.3f        B = %.3f", a , b));
+            System.out.print(String.format("\nA = %.3f        B = %.3f", A , B));
             printLine();
             System.out.print("\na       Enter a value for A");
             System.out.print("\nb       Enter a value for B");
@@ -46,17 +46,17 @@ public class ChavviCalculator
             // user input error handling 
             // check if user input is a valid char type
             if (choice.length() != 1){
-                System.out.println("ERROR: Unknown command 1");
+                System.out.println("ERROR: Unknown command");
             }
 
-            
+
             // input A 
             else if (choice.charAt(0) == 'a'){
                 System.out.print("Enter a number: ");
-                String a_string;
+                String aString;
                 try {
-                    a_string = sc.nextLine();
-                    a = Float.parseFloat(a_string);
+                    aString = sc.nextLine();
+                    A = Float.parseFloat(aString);
                 }
                 catch (NumberFormatException e){
                     System.out.println("ERROR: The value entered is not a floating point number");
@@ -66,10 +66,10 @@ public class ChavviCalculator
             // input B
             else if (choice.charAt(0) == 'b') {
                 System.out.print("Enter a number: ");
-                      String b_string;
+                      String bString;
                 try{
-                  b_string = sc.nextLine();
-                  b = Float.parseFloat(b_string);
+                  bString = sc.nextLine();
+                  B = Float.parseFloat(bString);
                 }
                 catch (NumberFormatException e){
                   System.out.println("ERROR: The value entered is not a floating point number");
@@ -78,33 +78,33 @@ public class ChavviCalculator
 
             // + option
             else if (choice.charAt(0) == '+'){
-                a = a + b;
+                A = A + B;
             }
 
             // - option 
             else if (choice.charAt(0) == '-') {
-                a = a - b;
+                A = A - B;
             }
 
             // * option
             else if (choice.charAt(0) == '*') {
-                a = a * b;
+                A = A * B;
             }
 
             // / option
             else if (choice.charAt(0) == '/'){
-                if (b == 0) {
+                if (B == 0) {
                     System.out.println("ERROR: Unable to divide by 0");
                 }
                 else {
-                    a = a / b;
+                    A = A / B;
                 }
             }
 
             // clear option
             else if (choice.charAt(0) == 'c'){
-                a = 0;
-                b = 0;
+                A = 0;
+                B = 0;
             }
 
             // quit option
@@ -115,7 +115,7 @@ public class ChavviCalculator
 
             // display error when user input is not a valid menu character
             else{
-                System.out.println("ERROR: Unknown command 2");
+                System.out.println("ERROR: Unknown command");
             }
         } while (choice.equals("") || choice.charAt(0) != 'q');
     }
